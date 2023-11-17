@@ -8,8 +8,10 @@ import click
     "--count",
     default=1,
 )
-def hello(name):
-    print(f"Hello {name}!")
+
+def hello(name, count):
+    for _ in range(count):
+        print(f"Hello {name}!")
     
 
 if __name__ == "__main__":
