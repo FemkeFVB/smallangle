@@ -1,9 +1,16 @@
-import click
+import click 
 
 
 @click.command()
-def hello():
-    print("Hello physicist!")
+@click.argument("name")
+@click.option(
+    "-c",
+    "--count",
+    default=1,
+)
+def hello(name):
+    print(f"Hello {name}!")
+    
 
 if __name__ == "__main__":
     hello()
